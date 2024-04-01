@@ -3,3 +3,15 @@
     scroll-behavior: smooth;
     margin: 0;
 }
+
+body {
+    width: calc(100vw - (100vw - 100%));
+    background-color: #141D2F;
+    font-family: poppins;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
