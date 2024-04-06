@@ -4,40 +4,55 @@ header {
     position: relative;
 }
 
-.headshot {
-    background-image: url(./../../../../assets/img/headshot/IMG_7664-2-Photoroom.png-Photoroom.png);
-    background-size: 50%;
-    background-position: 0px 0px;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
+// .headshot {
+//     background-image: url(./../../../../assets/img/headshot/IMG_7664-2-Photoroom.png-Photoroom.png);
+//     background-size: 50%;
+//     background-position: 0px 0px;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 100%;
+// }
 
 .introduce {
     display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    // position: absolute;
+    // top: 30%;
+    // right: 4%;
+    gap: 40px;
+    button {
+        width: 165px;
+        height: 58px;
+        border-radius: 10px;
+        background-color: #00BEE8;
+        border: none;
+        font-size: 23px;
+        color: white;
+    }
+}
+
+.introduce-0 {
+    display: flex;
     align-items: center;
-    position: absolute;
-    top: 40%;
-    right: 4%;
+
     width: fit-content;
     height: fit-content;
-
     .introduce-1 {
         font-size: clamp(35px, 5vw, 75px);
         transform-origin: 53% center;
         rotate: -90deg;
-        // height: 32px;
     }
-
     .introduce-2 {
         font-size: clamp(45px, 6vw, 90px);
         font-weight: 700;
-        // height: 64px;
     }
-
     .introduce-3 {
         font-size: clamp(26px, 3.5vw, 53px);
-        // height: 40px;
         color: #4B47FF;
     }
 }
@@ -51,11 +66,7 @@ header {
     background-size: min(calc(70vh - 64px), 80vw);
     background-position: left 3vw center;
     background-repeat: no-repeat;
-    // overflow: visible;
-    // background-clip: content-box;
-    // background-attachment: fixed;
     z-index: -1;
-
     img {
         width: 100%;
         position: absolute;
@@ -63,20 +74,24 @@ header {
     }
 }
 
-// .background {
-//     position: absolute;
-//     top: 0;
-//     height: 100%;
-//     width: 100%;
-//     background-image: url(./../../../../assets/img/background-curve1.svg), url(./../../../../assets/img/headshot/IMG_7664-2-Photoroom.png-Photoroom.png);
-//     background-size: auto, 700px;
-//     background-position: left bottom -395px, left center;
-//     background-repeat: no-repeat;
-//     // overflow: visible;
-//     // background-clip: content-box;
-//     // background-attachment: fixed;
-//     z-index: -1;
-// }
+.links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    hr {
+        height: 4px;
+        width: 100px;
+        border-width: 0;
+        color: #4B47FF;
+        background-color: #4B47FF;
+    }
+    img {
+        height: 30px;
+    }
+    a {
+        display: flex;
+    }
+}
 
 @media (min-width: 1450px) {
     .background {
@@ -96,5 +111,32 @@ header {
     .background {
         // background-size: 100%;
         background-position: left 3vw center;
+    }
+}
+
+@media (max-aspect-ratio: 1.2/1) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+    .introduce {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .background {
+        background-position: center center;
+        img {
+            width: 100%;
+            position: absolute;
+            top: calc(100% - 44vw);
+        }
+    }
+    .links {
+        a {
+            display: none;
+        }
     }
 }
