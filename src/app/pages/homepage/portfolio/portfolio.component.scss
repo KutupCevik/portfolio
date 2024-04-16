@@ -1,0 +1,44 @@
+section {
+    width: 90%;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+
+.portfolio-introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    margin-top: 80px;
+    :nth-child(2) {
+        justify-content: end;
+    }
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    img {
+        width: 300px;
+    }
+}
+
+.project-introduce {
+    width: 313px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 40px;
+}
