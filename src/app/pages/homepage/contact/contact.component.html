@@ -1,1 +1,116 @@
-<p>contact works!</p>
+<section>
+    <div>
+        <h1>Contact</h1>
+    </div>
+    <main>
+        <div class="contact-me-txt">
+            <h2>Got a problem to solve?</h2>
+            <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
+                your projects with my work.</p>
+            <p>Need a Frontend developer? Contact me!</p>
+        </div>
+        <!-- <div>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="inputGroup" action="">
+                <div>
+                    <input [(ngModel)]="contactData.name" id="name" type="text" name="name" required=""
+                        autocomplete="off">
+                    <label for="name">Your name</label>
+                </div>
+                <div>
+                    <input [(ngModel)]="contactData.email" id="mail" type="text" name="mail" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <label for="mail">Your mail</label>
+                </div>
+                <div>
+                    <textarea [(ngModel)]="contactData.message" #message="ngModel" name="" id="message" name="message"
+                        cols="30" rows="10" required></textarea>
+                    <label for="message">Your message</label>
+                </div>
+                @if (!message.valid && message.touched && !message.disabled) {
+                <span>Please enter a message</span>
+                }
+                <input class="submit" type="submit">
+            </form>
+            <div>
+                <a href="#header"><img src="./../../../../assets/img/icons/up.svg" alt=""></a>
+            </div>
+        </div> -->
+
+        <div>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput [(ngModel)]="contactData.name" #namelInput="ngModel" name="name" required>
+                    @if (namelInput.touched && namelInput.valid) {
+                        <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                    }
+                    @if (namelInput.touched && namelInput.errors?.['required']) {
+                        <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                    }
+                    @if (namelInput.touched && namelInput.errors?.['required']) {
+                        <mat-error>Name wird benötigt.</mat-error>
+                    }
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>E-Mail</mat-label>
+                    <input matInput [(ngModel)]="contactData.email" #emailInput="ngModel" name="email" required
+                        pattern="^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$" placeholder="beispiel@example.com">
+                        @if (emailInput.touched && emailInput.valid) {
+                            <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                        }
+                        @if (emailInput.touched && emailInput.invalid) {
+                            <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                        }
+                        @if (emailInput.touched && emailInput.errors?.['required']) {
+                            <mat-error>E-Mail-Adresse wird benötigt.</mat-error>
+                        }
+                        @if (emailInput.touched && emailInput.errors?.['pattern']) {
+                            <mat-error>Ungültige E-Mail-Adresse.</mat-error>
+                        }
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Nachricht</mat-label>
+                    <textarea matInput [(ngModel)]="contactData.message" #messagelInput="ngModel" name="message" required></textarea>
+                    @if (messagelInput.touched && messagelInput.valid) {
+                        <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                    }
+                    @if (messagelInput.touched && messagelInput.errors?.['required']) {
+                        <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                    }
+                    @if (messagelInput.touched && messagelInput.errors?.['required']) {
+                        <mat-error>Nachricht wird benötigt.</mat-error>
+                    }
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" class="submit"
+                    [disabled]="!contactData.name || !contactData.email || !contactData.message">Absenden</button>
+            </form>
+        </div>
+
+        <!-- <form class="contact-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Your name</mat-label>
+                <input matInput type="text" [formControl]="nameFormControl" name="name" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Your mail</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+                <mat-hint>Errors appear instantly!</mat-hint>
+                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                <mat-error>Please enter a valid email address</mat-error>
+                }
+                @if (emailFormControl.hasError('required')) {
+                <mat-error>Email is <strong>required</strong></mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Your message</mat-label>
+                <textarea matInput [formControl]="messageFormControl"></textarea>
+            </mat-form-field>
+        </form> -->
+    </main>
+
+</section>

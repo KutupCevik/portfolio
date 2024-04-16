@@ -1,0 +1,66 @@
+section {
+    width: 90%;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-me-txt {
+    max-width: 473px;
+}
+
+.contact-form {
+    max-width: 617px;
+    width: 617px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    input,
+    textarea {
+        color: white;
+        border: 1px solid #4B47FF;
+        border-radius: 10px;
+        &::placeholder {
+            color: gray;
+        }
+    }
+    mat-label {
+        color: white;
+        font-size: 14px;
+    }
+}
+
+.mat-form-field {
+    input,
+    textarea {
+        color: white;
+        border: 1px solid #4B47FF;
+        border-radius: 10px;
+        ::placeholder {
+            color: gray;
+        }
+    }
+}
+
+.submit {
+    max-width: 253px;
+    height: 58px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.valid-icon {
+    color: #1CE6B6;
+    /* Valid icon color */
+}
+
+.invalid-icon {
+    color: red;
+    /* Invalid icon color */
+}
