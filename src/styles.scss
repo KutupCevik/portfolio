@@ -12,14 +12,14 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $portfolio-primary: mat.define-palette(mat.$green-palette);
-$portfolio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$portfolio-accent: mat.define-palette(mat.$indigo-palette, 600);
 
 // The warn palette is optional (defaults to red).
 $portfolio-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$portfolio-theme: mat.define-light-theme((color: (primary: $portfolio-primary,
+$portfolio-theme: mat.define-dark-theme((color: (primary: $portfolio-primary,
                 accent: $portfolio-accent,
                 warn: $portfolio-warn,
             ),
@@ -30,8 +30,6 @@ $portfolio-theme: mat.define-light-theme((color: (primary: $portfolio-primary,
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($portfolio-theme);
-
-
 
 .mdc-text-field {
     --mdc-outlined-text-field-color: #4B47FF;
@@ -46,21 +44,9 @@ $portfolio-theme: mat.define-light-theme((color: (primary: $portfolio-primary,
     --mdc-outlined-text-field-outline-width: 1px;
 }
 
-.mdc-text-field--focused {
-    color: #1CE6B6;
-}
 
-.mdc-text-field--focused .mdc-floating-label {
-    color: #1CE6B6;
-}
 
-.mdc-floating-label {
-    color: rgb(13, 255, 0)
-}
 
-.mat-form-field .mat-input-element:not(:placeholder-shown) {
-    color: #FF5733; /* Ändere diese Farbe nach deinen Wünschen */
-  }
 
 //   $my-primary: mat.define-palette(mat.$indigo-palette, 500);
 // $my-accent: mat.define-palette(mat.$teal-palette, A400);
@@ -99,7 +85,9 @@ button {
 }
 
 h1 {
-    font-size: clamp(45px, 6vw, 90px);
+    // font-size: clamp(45px, 6vw, 90px);
+    font-size: clamp(38px, 6vw, 90px);
+    margin-bottom: 30px;
 }
 
 .legal {
@@ -109,12 +97,12 @@ h1 {
     margin-right: 80px;
 }
 
-html,
-body {
-    height: 100%;
-}
+// html,
+// body {
+//     height: 100%;
+// }
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
+// body {
+//     margin: 0;
+//     font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
