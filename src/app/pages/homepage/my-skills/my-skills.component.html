@@ -1,4 +1,11 @@
 <section>
+    <div class="introduce-skills">
+        <div>
+            <h1>My Skills</h1>
+            <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
+        </div>
+        <button><a href="#contact">Get in Touch</a></button>
+    </div>
     <div class="skills">
         @for (item of skills; track $index) {
             <div class="skill">
@@ -6,12 +13,5 @@
                 <span>{{item.name}}</span>
             </div>
         }
-    </div>
-    <div class="introduce-skills">
-        <div>
-            <h1>My Skills</h1>
-            <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
-        </div>
-        <button>Get in Touch</button>
     </div>
 </section>
