@@ -1,12 +1,21 @@
 <nav>
     <div class="navbar">
-        <div>
+        <div class="logo">
             <a href="">Kutup</a>
         </div>
-        <div class="navbar-links">
-            <a href="#about-me">About Me</a>
-            <a href="#my-skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
+
+        <div [ngClass]="{'class': true}" class="hamburger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+                <span></span>
+            </label>
+
+            <div [ngClass]="{'class': true}" class="menu-box">
+                <a href="#about-me">About Me</a>
+                <a href="#my-skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
     </div>
 </nav>
