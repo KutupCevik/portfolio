@@ -1,8 +1,11 @@
 section {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     width: 90%;
-    margin: 0 auto;
+    margin: 0px auto 30vh auto;
+    padding-top: 64px;
+    gap: 40px;
 }
 
 .skills {
@@ -16,9 +19,9 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 88px;
+    gap: 10px;
+    width: 110px;
     height: 100px;
-    margin-right: 40px;
     img {
         height: 60px;
     }
@@ -28,7 +31,22 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 40px;
+    max-width: 471px;
     div {
         text-align: end;
+    }
+    // p {
+    //     max-width: 471px;
+    // }
+}
+
+@media (max-aspect-ratio: 1.2/1) {
+    section {
+        flex-direction: column;
+    }
+
+    .skills {
+        justify-content: center;
     }
 }
