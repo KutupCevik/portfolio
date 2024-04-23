@@ -1,6 +1,6 @@
 section {
     width: 90%;
-    margin: 0 auto;
+    margin: 0px auto 20px auto;
     // display: flex;
     // flex-direction: column;
     // align-items: center;
@@ -9,6 +9,7 @@ section {
 main {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .contact-me-txt {
@@ -17,19 +18,22 @@ main {
 
 .contact-form {
     max-width: 617px;
-    width: 617px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     input,
     textarea {
         color: white;
         border: 1px solid #4B47FF;
         border-radius: 10px;
+
         &::placeholder {
             color: gray;
         }
     }
+
     mat-label {
         color: white;
         font-size: 14px;
@@ -37,14 +41,22 @@ main {
 }
 
 .mat-form-field {
+
     input,
     textarea {
         color: white;
         border: 1px solid #4B47FF;
         border-radius: 10px;
+
         ::placeholder {
             color: gray;
         }
+    }
+}
+
+.checkbox {
+    a {
+        text-decoration: underline;
     }
 }
 
@@ -56,11 +68,17 @@ main {
 }
 
 .valid-icon {
-    color: #1CE6B6;
+    color: #70E61C;
     /* Valid icon color */
 }
 
 .invalid-icon {
     color: red;
     /* Invalid icon color */
+}
+
+@media (max-aspect-ratio: 1.2/1) {
+    main {
+        flex-direction: column;
+    }
 }

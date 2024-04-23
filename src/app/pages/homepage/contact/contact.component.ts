@@ -6,6 +6,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import { NgClass } from '@angular/common';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {ThemePalette} from '@angular/material/core';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -18,7 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass],
+  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass, MatCheckboxModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -32,6 +34,7 @@ export class ContactComponent {
     name: '',
     email: '',
     message: '',
+    legal: false
   };
 
   // onSubmit(ngForm: NgForm) {
@@ -40,7 +43,7 @@ export class ContactComponent {
   //   }
   // }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://kutupcevik.com/sendMail.php',
