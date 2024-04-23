@@ -1,6 +1,7 @@
 section {
     width: 90%;
-    margin: 0 auto;
+    margin: 30vh auto 30vh auto;
+    padding-top: 64px;
     display: flex;
     justify-content: space-between;
 }
@@ -38,7 +39,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: start;
+    div {
+        min-width: 90px;
+    }
     p {
         max-width: 359px;
+    }
+}
+
+@media (max-aspect-ratio: 1.2/1) {
+    .headshot {
+        display: none;
     }
 }
