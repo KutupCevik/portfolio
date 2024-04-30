@@ -1,6 +1,6 @@
 header {
     height: calc(100vh - 64px);
-    height: calc(100dvh - 64px);
+    height: calc(100svh - 64px);
     max-height: 3840px;
     position: relative;
 }
@@ -36,18 +36,18 @@ header {
     height: fit-content;
 
     .introduce-1 {
-        font-size: clamp(25px, 8vw, 71px);
+        font-size: clamp(25px, 5.5vw, 71px);
         transform-origin: 53% center;
         rotate: -90deg;
     }
 
     .introduce-2 {
-        font-size: clamp(31px, 10vw, 90px);
+        font-size: clamp(31px, 7vw, 90px);
         font-weight: 700;
     }
 
     .introduce-3 {
-        font-size: clamp(18px, 5.9vw, 53px);
+        font-size: clamp(18px, 4.1vw, 53px);
         color: #4B47FF;
     }
 }

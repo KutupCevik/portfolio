@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { NgClass } from '@angular/common';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ThemePalette} from '@angular/material/core';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -20,12 +21,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass, MatCheckboxModule],
+  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass, MatCheckboxModule, MatSnackBarModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 
 export class ContactComponent {
+  constructor(private snackBar: MatSnackBar) {}
+
   matcher = new MyErrorStateMatcher();
 
   http = inject(HttpClient);
@@ -74,5 +77,13 @@ export class ContactComponent {
       console.log(this.contactData);
       ngForm.resetForm();
     }
+  }
+
+  openSnackBar() {
+    this.snackBar.open('Message sent.', 'close', {
+      duration: 5000, // Zeit in Millisekunden, bis der SnackBar automatisch geschlossen wird
+      // horizontalPosition: 'center', // Position des SnackBars auf dem Bildschirm
+      // verticalPosition: 'bottom', // Position des SnackBars auf dem Bildschirm
+    });
   }
 }

@@ -42,51 +42,55 @@
                     <mat-label>Name</mat-label>
                     <input matInput [(ngModel)]="contactData.name" #namelInput="ngModel" name="name" required>
                     @if (namelInput.touched && namelInput.valid) {
-                        <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                    <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
                     }
                     @if (namelInput.touched && namelInput.errors?.['required']) {
-                        <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                    <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
                     }
                     @if (namelInput.touched && namelInput.errors?.['required']) {
-                        <mat-error>Name wird benötigt.</mat-error>
+                    <mat-error>Name wird benötigt.</mat-error>
                     }
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>E-Mail</mat-label>
                     <input matInput [(ngModel)]="contactData.email" #emailInput="ngModel" name="email" required
-                        pattern="^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$" placeholder="beispiel@example.com">
-                        @if (emailInput.touched && emailInput.valid) {
-                            <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
-                        }
-                        @if (emailInput.touched && emailInput.invalid) {
-                            <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
-                        }
-                        @if (emailInput.touched && emailInput.errors?.['required']) {
-                            <mat-error>E-Mail-Adresse wird benötigt.</mat-error>
-                        }
-                        @if (emailInput.touched && emailInput.errors?.['pattern']) {
-                            <mat-error>Ungültige E-Mail-Adresse.</mat-error>
-                        }
+                        pattern="^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$"
+                        placeholder="beispiel@example.com">
+                    @if (emailInput.touched && emailInput.valid) {
+                    <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                    }
+                    @if (emailInput.touched && emailInput.invalid) {
+                    <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                    }
+                    @if (emailInput.touched && emailInput.errors?.['required']) {
+                    <mat-error>E-Mail-Adresse wird benötigt.</mat-error>
+                    }
+                    @if (emailInput.touched && emailInput.errors?.['pattern']) {
+                    <mat-error>Ungültige E-Mail-Adresse.</mat-error>
+                    }
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Nachricht</mat-label>
-                    <textarea matInput [(ngModel)]="contactData.message" #messagelInput="ngModel" name="message" required></textarea>
+                    <textarea matInput [(ngModel)]="contactData.message" #messagelInput="ngModel" name="message"
+                        required></textarea>
                     @if (messagelInput.touched && messagelInput.valid) {
-                        <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
+                    <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
                     }
                     @if (messagelInput.touched && messagelInput.errors?.['required']) {
-                        <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
+                    <mat-icon class="invalid-icon" matIconSuffix>error</mat-icon>
                     }
                     @if (messagelInput.touched && messagelInput.errors?.['required']) {
-                        <mat-error>Nachricht wird benötigt.</mat-error>
+                    <mat-error>Nachricht wird benötigt.</mat-error>
                     }
                 </mat-form-field>
 
-                <mat-checkbox class="checkbox" [(ngModel)]="contactData.legal" name="checkbox" required>Ich habe die <a href="">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.</mat-checkbox>
+                <mat-checkbox class="checkbox" [(ngModel)]="contactData.legal" name="checkbox" required>Ich habe die <a
+                        href="">Datenschutzbestimmungen</a> gelesen und stimme der Verarbeitung meiner Daten gemäß den
+                    Bestimmungen zu.</mat-checkbox>
 
-                <button mat-raised-button color="primary" type="submit" class="submit"
+                <button (click)="openSnackBar()" mat-raised-button color="primary" type="submit" class="submit"
                     [disabled]="!contactData.name || !contactData.email || !contactData.message || !contactData.legal">Absenden</button>
             </form>
         </div>
