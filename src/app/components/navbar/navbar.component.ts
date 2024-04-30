@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  screenWidth: number = window.innerWidth;
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
+  }
 }
