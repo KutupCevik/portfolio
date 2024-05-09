@@ -1,10 +1,10 @@
 <section>
     <div class="portfolio-introduce">
-        <h1>Portfolio</h1>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <h1>{{'navbar.portfolio' | translate }}</h1>
+        <p>{{'portfolio.description' | translate }}</p>
     </div>
     <div class="portfolio">
-        @for (project of projects; track $index) {
+        @for (project of projects; track i; let i = $index) {
             <div class="project">
                 <div>
                     <img src="{{project.img}}" alt="">
@@ -12,8 +12,21 @@
                 <div class="project-introduce">
                     <div>
                         <h2>{{project.name}}</h2>
-                        <p>{{project.technologie}}</p>
-                        <p>{{project.description}}</p>
+                        <div class="technologie">
+                            @for (technologie of project.technologie; track j; let j = $index) {
+                                <span>
+                                    {{technologie}}
+                                    @if (j < project.technologie.length -1) {
+                                        |
+                                    }
+                                </span>
+                            }
+                        </div>
+                        @if (this.translateService.currentLang == "de") {
+                            <p>{{project.descriptionDE}}</p>
+                        } @else () {
+                            <p>{{project.descriptionEN}}</p>
+                        }
                     </div>
                     <div class="project-buttons">
                         <button><a href="{{project.liveTest}}">Live test</a></button>

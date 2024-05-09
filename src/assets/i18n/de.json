@@ -1,0 +1,72 @@
+{
+    "navbar": {
+        "about-me": "Über mich",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt",
+        "currentLanguage": "EN"
+    },
+
+    "header": {
+        "i-am": "Ich bin",
+        "developer": "FRONTEND ENTWICKLER",
+        "contact": "Schreib mir!"
+    },
+
+    "about-me": {
+        "me": "Hallo, ich bin ein Front-End-Entwickler aus Bremen, Deutschland, mit einer Leidenschaft für die Gestaltung ansprechender Benutzeroberflächen und herausragender Benutzererfahrungen. Mit meiner Expertise möchte ich die Anforderungen meiner Kunden erfüllen und hochwertige Websites und Anwendungen entwickeln. Wenn Sie an einer Zusammenarbeit interessiert sind oder einfach nur über Technologie und Design sprechen möchten, freue ich mich darauf, von Ihnen zu hören.",
+        "first": "Ich habe meine Programmierkenntnisse durch intensive Arbeit an Einzel- und Gruppenprojekten erworben. Durch tägliches Programmieren und Feedback von Mentoren und Teammitgliedern konnte ich mich schnell an diese Rolle anpassen und eine Fülle von Erfahrungen sammeln.",
+        "second": "Ich arbeite täglich an einer Vielzahl von Softwareprojekten. Neben der Anwendung verschiedener Techniken und Programmiersprachen priorisiere ich Benutzererfahrung und sauberen Code."
+    },
+
+    "my-skills": {
+        "my-skills": "Meine Skills",
+        "description": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung ausgebaut, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+        "button": "Kontaktieren"
+    },
+
+    "portfolio": {
+        "description": "Erkunde hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "button": "Get in Touch"
+    },
+
+    "contact": {
+        "1": "Gibt es ein Problem zu lösen?",
+        "2": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "3": "Brauchen Sie einen Frontend-Entwickler?",
+        "4": "Kontaktieren Sie mich!",
+        "5": "Name wird benötigt.",
+        "6": "E-Mail-Adresse wird benötigt.",
+        "7": "Ungültige E-Mail-Adresse.",
+        "8": "Nachricht",
+        "9": "Nachricht wird benötigt.",
+        "10": "Ich habe die",
+        "11": "Datenschutzbestimmungen",
+        "12": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
+        "button": "Absenden"
+    },
+
+    "legal": {
+        "1": "Impressum",
+        "2": "Angaben gemäß § 5 TMG",
+        "3": "Kontakt:",
+        "4": "Telefon: ",
+        "5": "E-Mail: ",
+        "6": "Haftungsausschluss: ",
+        "7": "Haftung für Inhalte",
+        "8": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.",
+        "9": "Haftung für Links",
+        "10": "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.",
+        "11": "Urheberrecht",
+        "12": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
+        "13": "Datenschutz",
+        "14": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.",
+        "15": "Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+        "16": "Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor.",
+        "17": "Impressum vom",
+        "18": "of",
+        "19": "",
+        "20": "",
+        "button": "Submit"
+    }
+}

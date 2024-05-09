@@ -1,6 +1,6 @@
 section {
     width: 90%;
-    margin: 0 auto 30vh auto;
+    margin: 0 auto 10vw auto;
     padding-top: 64px;
     // display: flex;
     // flex-direction: column;
@@ -9,7 +9,7 @@ section {
 
 h2 {
     color: #4B47FF;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .portfolio-introduce {
@@ -40,7 +40,7 @@ h2 {
 }
 
 .project-introduce {
-    width: 313px;
+    width: 380px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -49,6 +49,12 @@ h2 {
 .project-buttons {
     display: flex;
     gap: 40px;
+}
+
+.technologie {
+    font-size: 23px;
+    color: #00BEE8;
+    margin-bottom: 10px;
 }
 
 

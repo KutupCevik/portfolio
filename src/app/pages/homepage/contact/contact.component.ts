@@ -9,6 +9,8 @@ import { NgClass } from '@angular/common';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {ThemePalette} from '@angular/material/core';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { TranslationService } from '../../../translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -21,7 +23,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass, MatCheckboxModule, MatSnackBarModule],
+  imports: [FormsModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule, MatIconModule, NgClass, MatCheckboxModule, MatSnackBarModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -59,6 +61,7 @@ export class ContactComponent {
     },
   };
 
+  translate = inject(TranslationService);
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {

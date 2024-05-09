@@ -1,9 +1,17 @@
 section {
     width: 90%;
-    margin: 30vh auto 30vh auto;
+    margin: 10vw auto 10vw auto;
     padding-top: 64px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.headshot-section {
+    display: flex;
+    align-items: center;
+    width: 44%;
+    min-width: 500px;
 }
 
 .headshot {
@@ -16,13 +24,17 @@ section {
     background-image: url(./../../../../assets/img/headshot/IMG_7747-Photoroom.png-Photoroom.png);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    hr {
-        min-width: 100px;
-    }
+}
+
+hr {
+    height: 4px;
+    width: 100%;
+    border-width: 0;
+    color: #00BEE8;
+    background-color: #00BEE8;
+    // position: absolute;
+    // right: 0;
+    // transform: translateX(0%);
 }
 
 .about-me {
@@ -48,7 +60,11 @@ section {
 }
 
 @media (max-aspect-ratio: 1.2/1) {
-    .headshot {
+    section {
+        justify-content: center;
+    }
+
+    .headshot-section {
         display: none;
     }
 }
