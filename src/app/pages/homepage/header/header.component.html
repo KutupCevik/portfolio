@@ -2,7 +2,7 @@
     
     <div class="introduce">
         <div class="introduce-0">
-            <div class="introduce-1">{{'header.i-am' | translate }}</div>
+            <div [ngClass]="{'introduce-1': !languageDE(), 'introduce-1-de': languageDE()}">{{'header.i-am' | translate }}</div>
             <div>
                 <div class="introduce-2">Kutup Cevik</div>
                 <div class="introduce-3">{{'header.developer' | translate }}</div>

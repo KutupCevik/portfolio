@@ -19,9 +19,8 @@ header {
     justify-content: center;
     align-items: end;
     flex-direction: column;
-    width: 90%;
     height: 90%;
-    margin: 0 auto;
+    margin: 0 5vw 0 0;
     // position: absolute;
     // top: 30%;
     // right: 4%;
@@ -36,14 +35,23 @@ header {
     height: fit-content;
 
     .introduce-1 {
-        font-size: clamp(25px, 5.5vw, 71px);
+        font-size: clamp(24px, 5.3vw, 67px);
         transform-origin: 53% center;
-        rotate: -90deg;
+        rotate: -180deg;
+        writing-mode: vertical-rl;
+    }
+
+    .introduce-1-de {
+        font-size: clamp(16px, 3.5vw, 44px);
+        transform-origin: 53% center;
+        rotate: -180deg;
+        writing-mode: vertical-rl;
     }
 
     .introduce-2 {
         font-size: clamp(31px, 7vw, 90px);
         font-weight: 700;
+        margin: -1vw 0;
     }
 
     .introduce-3 {
@@ -67,7 +75,7 @@ header {
     img {
         width: 100%;
         position: absolute;
-        top: calc(100% - 40vw);
+        top: calc(100% - 48vw);
     }
 }
 
@@ -75,6 +83,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
+    margin: 0px 5vw 0px 0px;
 }
 
 .links {
@@ -108,7 +117,7 @@ $peakopacity: 0.7;
 .arrows {
     width: $size;
     height: $size;
-    transform: translate(-270%, -120%);
+    transform: translate(-25px, -80px);
 
     &:before {
         content: '';
@@ -181,6 +190,12 @@ $peakopacity: 0.7;
     }
 }
 
+// @media (max-height: 1100px) {
+//     .background {
+        
+//     }
+// }
+
 @media (max-aspect-ratio: 1.2/1) {
     header {
         display: flex;
@@ -201,7 +216,7 @@ $peakopacity: 0.7;
         img {
             width: unset;
             top: unset;
-            bottom: -350px;
+            bottom: -250px;
         }
     }
 
@@ -213,5 +228,20 @@ $peakopacity: 0.7;
 
     .arrows {
         display: none;
+    }
+}
+
+@media (max-aspect-ratio: 1.2/1) and (max-height: 1100px) {
+    .background {
+        img {
+            bottom: -350px;
+        }
+    }
+}
+
+@media (max-aspect-ratio: 1.2/1) and (max-height: 600px) {
+    .background {
+        // background-size: 700px;
+        background-position: center top;
     }
 }
