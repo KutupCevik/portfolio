@@ -46,6 +46,10 @@
         "button": "Submit"
     },
 
+    "footer": {
+        "imprint": "Imprint"
+    },
+
     "legal": {
         "1": "Imprint",
         "2": "Information in accordance with Section 5 TMG",

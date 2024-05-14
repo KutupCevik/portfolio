@@ -15,7 +15,8 @@
                 <a href="#my-skills">{{'navbar.skills' | translate }}</a>
                 <a href="#portfolio">{{'navbar.portfolio' | translate }}</a>
                 <a href="#contact">{{'navbar.contact' | translate }}</a>
-                <a (click)="switchLanguage()">{{"navbar.currentLanguage"|translate}}</a>
+                <a class="language" (click)="switchLanguage()">
+                    <img src="./../../../assets/img/icons/language-icon.svg" alt="">{{"navbar.currentLanguage"|translate}}</a>
             </div>
         </div>
     </div>

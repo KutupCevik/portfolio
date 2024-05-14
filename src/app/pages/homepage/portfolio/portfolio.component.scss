@@ -10,6 +10,22 @@ h2 {
     margin-bottom: 10px;
 }
 
+button {
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+    background-color: #00BEE8;
+}
+
+button:active {
+    border-color: white;
+    background-color: white;
+    a {
+        color: #4B47FF;
+    }
+}
+
 .portfolio-introduce {
     display: flex;
     flex-direction: column;
@@ -55,6 +71,14 @@ h2 {
     margin-bottom: 10px;
 }
 
+.test-button {
+    background-color: #4B47FF;
+}
+
+.github-button {
+    background-color: transparent;
+    border: 1px solid #00BEE8;
+}
 
 @media (max-aspect-ratio: 1.2/1) {
     .project {

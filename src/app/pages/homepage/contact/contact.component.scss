@@ -11,6 +11,31 @@ main {
     gap: 20px;
 }
 
+button {
+    margin: 0 auto;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        padding: 20px 40px 20px 40px;
+        background-color: #4B47FF;
+    }
+
+    &active {
+        padding: 17px 30px 17px 30px;
+        background-color: white;
+        a {
+            color: black;
+        }
+    }
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: no-drop;
+    opacity: 80%;
+    padding: 17px 30px 17px 30px;
+}
+
 .contact-me-txt {
     max-width: 473px;
 }
@@ -21,12 +46,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    height: 460px;
 
     input,
     textarea {
         color: white;
         border: 1px solid #4B47FF;
         border-radius: 10px;
+        background-color: #141D2F;
 
         &::placeholder {
             color: gray;
@@ -60,10 +87,8 @@ main {
 }
 
 .submit {
-    max-width: 253px;
-    height: 58px;
-    margin: auto;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .valid-icon {

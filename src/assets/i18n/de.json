@@ -46,6 +46,10 @@
         "button": "Absenden"
     },
 
+    "footer": {
+        "imprint": "Impressum"
+    },
+
     "legal": {
         "1": "Impressum",
         "2": "Angaben gemäß § 5 TMG",

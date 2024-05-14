@@ -51,10 +51,11 @@
                     }
                 </mat-form-field>
 
+                <!-- ^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$ -->
                 <mat-form-field appearance="outline">
                     <mat-label>E-Mail</mat-label>
                     <input matInput [(ngModel)]="contactData.email" #emailInput="ngModel" name="email" required
-                        pattern="^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                         placeholder="beispiel@example.com">
                     @if (emailInput.touched && emailInput.valid) {
                     <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>
@@ -86,7 +87,7 @@
                 </mat-form-field>
 
                 <mat-checkbox class="checkbox" [(ngModel)]="contactData.legal" name="checkbox" required>{{'contact.10' | translate }} <a
-                        href="">{{'contact.11' | translate }}</a> {{'contact.12' | translate }}</mat-checkbox>
+                        href="imprint">{{'contact.11' | translate }}</a> {{'contact.12' | translate }}</mat-checkbox>
 
                 <button (click)="openSnackBar()" mat-raised-button color="primary" type="submit" class="submit"
                     [disabled]="!contactData.name || !contactData.email || !contactData.message || !contactData.legal">{{'contact.button' | translate }}</button>
