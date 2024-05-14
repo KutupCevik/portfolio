@@ -3,10 +3,11 @@ a {
 }
 
 .legal {
-    height: calc(100vh - 129px);
-    overflow-y: scroll;
+    // height: calc(100vh);
+    // overflow-y: hidden;
     // margin-left: 80px;
     // margin-right: 80px;#
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
