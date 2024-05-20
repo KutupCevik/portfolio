@@ -4,12 +4,15 @@ section {
     justify-content: space-between;
     align-items: center;
     scroll-padding-top: 64px;
+    width: -webkit-fill-available;
+    max-width: 2160px;
+    float: right;
 }
 
 .headshot-section {
     display: flex;
     align-items: center;
-    width: 44%;
+    width: 50%;
     min-width: 500px;
 }
 
@@ -59,7 +62,7 @@ hr {
     }
 }
 
-@media (max-aspect-ratio: 1.2/1) {
+@media (max-aspect-ratio: 1.2/1) and (max-width: 1700px) {
     section {
         justify-content: center;
     }

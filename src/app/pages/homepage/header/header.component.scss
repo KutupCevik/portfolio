@@ -1,7 +1,10 @@
+:root {
+    --imageHeight: 0px; // Definiere die CSS-Variable
+}
+
 header {
     height: calc(100vh - 64px);
     height: calc(100svh - 64px);
-    max-height: 3840px;
     position: relative;
 }
 
@@ -16,12 +19,12 @@ button {
     &active {
         padding: 17px 30px 17px 30px;
         background-color: white;
+
         a {
             color: black;
         }
     }
 }
-
 
 .introduce {
     display: flex;
@@ -49,15 +52,15 @@ button {
     height: fit-content;
 
     .introduce-1 {
-        font-size: clamp(24px, 5.3vw, 67px);
-        transform-origin: 53% center;
+        font-size: clamp(25.5px, 5.8vw, 74px);
+        transform-origin: 53% 52%;
         rotate: -180deg;
         writing-mode: vertical-rl;
     }
 
     .introduce-1-de {
-        font-size: clamp(16px, 3.5vw, 44px);
-        transform-origin: 53% center;
+        font-size: clamp(17px, 3.76vw, 48px);
+        transform-origin: 53% 52.5%;
         rotate: -180deg;
         writing-mode: vertical-rl;
     }
@@ -65,11 +68,15 @@ button {
     .introduce-2 {
         font-size: clamp(31px, 7vw, 90px);
         font-weight: 700;
-        margin: -1vw 0;
     }
 
     .introduce-3 {
         font-size: clamp(18px, 4.1vw, 53px);
+        color: #4B47FF;
+    }
+
+    .introduce-3-de {
+        font-size: clamp(17.3px, 3.9vw, 50.5px);
         color: #4B47FF;
     }
 }
@@ -80,23 +87,26 @@ button {
     height: 100%;
     width: 100%;
     background-image: url(./../../../../assets/img/headshot/headshot1.png), url(./../../../../assets/img/background/purple-blue.svg);
-    background-size: min(calc(70vh - 64px), 80vw), min(calc(90vh), 150vw);
-    background-position: left 3vw center, left 3vw center;
+    background-size: min(calc(65vh - 64px), 80vw), min(calc(90vh), 150vw);
+    background-position: left 3vw bottom var(--imageHeight), left -3vw center;
     background-repeat: no-repeat;
     z-index: -1;
     overflow: hidden;
+}
 
-    img {
-        width: 100%;
-        position: absolute;
-        top: calc(100% - 48vw);
-    }
+.img {
+    width: 100%;
+    height: 55%;
+    position: absolute;
+    // top: calc(100% - 48vw);
+    object-fit: fill;
+    bottom: 0;
 }
 
 .header-bottom {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    align-items: center;
     margin: 0px 5vw 0px 0px;
 }
 
@@ -105,6 +115,7 @@ button {
     align-items: center;
     gap: 30px;
     height: fit-content;
+
     hr {
         height: 4px;
         width: 100px;
@@ -125,6 +136,7 @@ button {
 .icon {
     display: flex;
     transition: transform 0.1s ease-in-out;
+
     &:hover {
         transform: scale(1.2);
     }
@@ -190,35 +202,34 @@ $peakopacity: 0.7;
     }
 }
 
-
 @media (min-width: 1450px) {
     .background {
         // background-size: 700px;
-        background-position: left 3vw center;
+        // background-position: left 3vw center, left -3vw center;
     }
 }
 
 @media (max-width: 1350px) {
     .background {
         // background-size: 48%;
-        background-position: left 3vw center;
+        // background-position: left 3vw center, left -3vw center;
     }
 }
 
 @media (max-width: 800px) {
     .background {
         // background-size: 100%;
-        background-position: left 3vw center, left 3vw center;
+        // background-position: left 3vw center, left -3vw center;
     }
 }
 
 // @media (max-height: 1100px) {
 //     .background {
-        
+
 //     }
 // }
 
-@media (max-aspect-ratio: 1.2/1) {
+@media (max-aspect-ratio: 1.2/1) and (max-width: 1700px) {
     header {
         display: flex;
         flex-direction: column;
@@ -234,16 +245,11 @@ $peakopacity: 0.7;
 
     .i-am {
         height: 200px;
+        justify-content: end;
     }
 
     .background {
-        background-position: center center;
-
-        img {
-            width: unset;
-            top: unset;
-            bottom: -250px;
-        }
+        background-position: center bottom var(--imageHeight), center center;
     }
 
     .links {
@@ -257,34 +263,36 @@ $peakopacity: 0.7;
     }
 }
 
-@media (max-aspect-ratio: 1.2/1) and (max-height: 1100px) {
-    .background {
-        img {
-            bottom: -350px;
-        }
-    }
-}
+@media (max-aspect-ratio: 1.2/1) and (max-height: 1100px) {}
 
 @media (max-aspect-ratio: 1.2/1) and (max-height: 700px) {
     .background {
-        background-position: top center;
+        // background-position: top center;
+        background-position: center bottom var(--imageHeight), center center;
     }
 }
 
-@media (max-width: 350px) and (max-height: 700px) {
-    .background {
-        background-position: top 50px center;
+@media (max-aspect-ratio: 1.2/1) and (max-width: 800px) {
+    .img {
+        height: 50%;
+        width: 130%;
     }
 }
+
+// @media (max-width: 350px) and (max-height: 700px) {
+//     .background {
+//         background-position: top 50px center;
+//     }
+// }
 
 @media (max-width: 700px) and (min-height: 800px) {
     .background {
-        background-position: center bottom 100px, center center;
+        background-position: center bottom var(--imageHeight), center center;
     }
 }
 
 @media (max-width: 500px) and (min-height: 800px) {
     .background {
-        background-position: center bottom 200px, center center;
+        background-position: center bottom var(--imageHeight), center center;
     }
 }

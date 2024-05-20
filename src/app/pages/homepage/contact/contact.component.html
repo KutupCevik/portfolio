@@ -55,7 +55,7 @@
                 <mat-form-field appearance="outline">
                     <mat-label>E-Mail</mat-label>
                     <input matInput [(ngModel)]="contactData.email" #emailInput="ngModel" name="email" required
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,})$"
                         placeholder="beispiel@example.com">
                     @if (emailInput.touched && emailInput.valid) {
                     <mat-icon class="valid-icon" matIconSuffix>check_circle</mat-icon>

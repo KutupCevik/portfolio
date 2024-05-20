@@ -1,8 +1,8 @@
 section {
     margin: 64px 5vw 0 5vw;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
@@ -37,10 +37,8 @@ button:active {
     flex-direction: column;
     gap: 120px;
     margin-top: 80px;
-
-    :nth-child(2) {
-        justify-content: end;
-    }
+    max-width: 2160px;
+    width: 100%;
 }
 
 .project {
@@ -50,6 +48,10 @@ button:active {
 
     img {
         width: 300px;
+    }
+    
+    &:nth-child(2) {
+        justify-content: end;
     }
 }
 
@@ -80,14 +82,14 @@ button:active {
     border: 1px solid #00BEE8;
 }
 
-@media (max-aspect-ratio: 1.2/1) {
+@media (max-aspect-ratio: 1.2/1) and (max-width: 1700px) {
     .project {
         flex-direction: column;
         gap: 40px;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .project {
         flex-direction: column;
         gap: 40px;

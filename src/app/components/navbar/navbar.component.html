@@ -5,12 +5,12 @@
         </div>
 
         <div [ngClass]="{'hamburger-menu': screenWidth < 800}">
-            <input id="menu-toggle" [ngClass]="{'display-none': screenWidth > 800}" type="checkbox" />
-            <label [ngClass]="{'display-none': screenWidth > 800}" class="menu-btn" for="menu-toggle">
+            <input id="menu-toggle" [ngClass]="{'display-none': screenWidth > 799}" type="checkbox" />
+            <label [ngClass]="{'display-none': screenWidth > 799}" class="menu-btn" for="menu-toggle">
                 <span></span>
             </label>
 
-            <div [ngClass]="{'menu-box': screenWidth < 800, 'navbar-links': screenWidth > 800}">
+            <div [ngClass]="{'menu-box': screenWidth < 800, 'navbar-links': screenWidth > 799}">
                 <a href="#about-me">{{'navbar.about-me' | translate }}</a>
                 <a href="#my-skills">{{'navbar.skills' | translate }}</a>
                 <a href="#portfolio">{{'navbar.portfolio' | translate }}</a>
