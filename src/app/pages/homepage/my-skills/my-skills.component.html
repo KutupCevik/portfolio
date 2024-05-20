@@ -1,20 +1,22 @@
 <section>
-    <div class="introduce-skills">
-        <div>
-            <div class="title">
-                <h1>{{'my-skills.my-skills' | translate }}</h1>
-                <hr>
+    <hr>
+    <main>
+        <div class="introduce-skills">
+            <div>
+                <div class="title">
+                    <h1>{{'my-skills.my-skills' | translate }}</h1>
+                </div>
+                <p>{{'my-skills.description' | translate }}</p>
             </div>
-            <p>{{'my-skills.description' | translate }}</p>
+            <button><a href="#contact">{{'my-skills.button' | translate }}</a></button>
         </div>
-        <button><a href="#contact">{{'my-skills.button' | translate }}</a></button>
-    </div>
-    <div class="skills">
-        @for (item of skills; track $index) {
-            <div class="skill">
-                <img src="{{item.icon}}" alt="">
-                <span>{{item.name}}</span>
-            </div>
-        }
-    </div>
+        <div class="skills">
+            @for (item of skills; track $index) {
+                <div class="skill">
+                    <img src="{{item.icon}}" alt="">
+                    <span>{{item.name}}</span>
+                </div>
+            }
+        </div>
+    </main>
 </section>
