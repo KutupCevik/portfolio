@@ -42,6 +42,10 @@ export class MySkillsComponent {
       icon: './../../../../assets/img/icons/skills/css.svg'
     },
     {
+      name: 'SCSS',
+      icon: './../../../../assets/img/icons/skills/scss.svg'
+    },
+    {
       name: 'Rest-Api',
       icon: './../../../../assets/img/icons/skills/api.svg'
     },
