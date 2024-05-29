@@ -100,6 +100,12 @@ button:disabled {
     /* Invalid icon color */
 }
 
+.top-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+}
+
 @media (max-aspect-ratio: 1.2/1) and (max-width: 1700px) {
     main {
         flex-direction: column;
