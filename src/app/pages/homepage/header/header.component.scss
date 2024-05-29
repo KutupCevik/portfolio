@@ -88,10 +88,11 @@ button {
     width: 100%;
     background-image: url(./../../../../assets/img/headshot/headshot1.png), url(./../../../../assets/img/background/purple-blue.svg);
     background-size: min(calc(65vh - 64px), 80vw), min(calc(90vh), 150vw);
-    background-position: left 3vw bottom var(--imageHeight), left -3vw center;
+    background-position: left 3vw bottom var(--imageHeight), left -80px center;
     background-repeat: no-repeat;
     z-index: -1;
     overflow: hidden;
+
 }
 
 .img {
@@ -101,13 +102,25 @@ button {
     // top: calc(100% - 48vw);
     object-fit: fill;
     bottom: 0;
+    -webkit-mask-image: linear-gradient(170deg, rgb(0, 0, 0) 69%, rgba(0, 0, 0, 0.1) 74%, rgba(0, 0, 0, 0) 75%);
+    mask-image: linear-gradient(170deg, rgb(0, 0, 0) 69%, rgba(0, 0, 0, 0.1) 74%, rgba(0, 0, 0, 0) 75%);
 }
 
 .header-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
     margin: 0px 5vw 0px 0px;
+
+    hr {
+        height: 4px;
+        width: 100px;
+        border-width: 0;
+        color: #4B47FF;
+        background-color: #4B47FF;
+        margin-right: 40px;
+    }
 }
 
 .links {
@@ -116,14 +129,6 @@ button {
     gap: 30px;
     height: fit-content;
 
-    hr {
-        height: 4px;
-        width: 100px;
-        border-width: 0;
-        color: #4B47FF;
-        background-color: #4B47FF;
-    }
-
     img {
         height: 30px;
     }
@@ -131,6 +136,21 @@ button {
     a {
         display: flex;
     }
+}
+
+.container-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1930px;
+}
+
+.links-arrow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1930px;
 }
 
 .icon {
@@ -202,33 +222,6 @@ $peakopacity: 0.7;
     }
 }
 
-// @media (min-width: 1450px) {
-//     .background {
-//         // background-size: 700px;
-//         // background-position: left 3vw center, left -3vw center;
-//     }
-// }
-
-// @media (max-width: 1350px) {
-//     .background {
-//         // background-size: 48%;
-//         // background-position: left 3vw center, left -3vw center;
-//     }
-// }
-
-// @media (max-width: 800px) {
-//     .background {
-//         // background-size: 100%;
-//         // background-position: left 3vw center, left -3vw center;
-//     }
-// }
-
-// @media (max-height: 1100px) {
-//     .background {
-
-//     }
-// }
-
 @media (max-aspect-ratio: 1.2/1) and (max-width: 1700px) {
     header {
         display: flex;
@@ -267,7 +260,6 @@ $peakopacity: 0.7;
 
 @media (max-aspect-ratio: 1.2/1) and (max-height: 700px) {
     .background {
-        // background-position: top center;
         background-position: center bottom var(--imageHeight), center center;
     }
 }
@@ -279,12 +271,6 @@ $peakopacity: 0.7;
     }
 }
 
-// @media (max-width: 350px) and (max-height: 700px) {
-//     .background {
-//         background-position: top 50px center;
-//     }
-// }
-
 @media (max-width: 700px) and (min-height: 800px) {
     .background {
         background-position: center bottom var(--imageHeight), center center;
@@ -294,5 +280,16 @@ $peakopacity: 0.7;
 @media (max-width: 500px) and (min-height: 800px) {
     .background {
         background-position: center bottom var(--imageHeight), center center;
+    }
+}
+
+@media (min-width: 2100px) and (min-aspect-ratio: 1.2/1){
+    .background {
+        background-position: left calc(50% - 700px) bottom var(--imageHeight), left calc(50% - 700px) center;
+    }
+
+    .introduce {
+        margin: 0 auto 0px auto;
+        max-width: 1930px;
     }
 }

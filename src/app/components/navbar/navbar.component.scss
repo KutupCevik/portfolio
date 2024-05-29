@@ -13,6 +13,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1920px;
     margin: 0 5vw;
 }
 
@@ -163,6 +164,7 @@ nav {
         justify-content: end;
         gap: 4px;
         white-space: nowrap;
+        min-height: 58px;
 
         color: inherit;
         text-decoration: none;

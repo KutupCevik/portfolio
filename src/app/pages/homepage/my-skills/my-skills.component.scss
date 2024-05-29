@@ -1,17 +1,13 @@
 section {
     display: flex;
     flex-direction: row-reverse;
-    // width: 90%;
     margin: 64px 0 0 5vw;
-    // float: right;
 }
 
 main {
     display: flex;
     flex-direction: row-reverse;
-    // width: 90%;
     gap: 40px;
-    // float: right;
 }
 
 p {
@@ -91,5 +87,17 @@ hr {
 
     .skills {
         justify-content: center;
+    }
+}
+
+@media (min-aspect-ratio: 1.2/1) and (min-width: 2500px) {
+    hr {
+        width: 20vw;
+    }
+}
+
+@media (min-aspect-ratio: 1.2/1) and (min-width: 4000px) {
+    hr {
+        width: 30vw;
     }
 }

@@ -5,9 +5,8 @@ section {
     align-items: center;
     scroll-padding-top: 64px;
     width: -webkit-fill-available;
-    /* max-width: 3437px; */
     float: right;
-    gap: 17vw;
+    gap: min(17vw, 800px);
 }
 
 .headshot-section {
@@ -36,9 +35,6 @@ hr {
     border-width: 0;
     color: #00BEE8;
     background-color: #00BEE8;
-    // position: absolute;
-    // right: 0;
-    // transform: translateX(0%);
 }
 
 .about-me {

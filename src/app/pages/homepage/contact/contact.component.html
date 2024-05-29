@@ -8,32 +8,6 @@
             <p>{{'contact.2' | translate }}</p>
             <p>{{'contact.3' | translate }} <b>{{'contact.4' | translate }}</b></p>
         </div>
-        <!-- <div>
-            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="inputGroup" action="">
-                <div>
-                    <input [(ngModel)]="contactData.name" id="name" type="text" name="name" required=""
-                        autocomplete="off">
-                    <label for="name">Your name</label>
-                </div>
-                <div>
-                    <input [(ngModel)]="contactData.email" id="mail" type="text" name="mail" required
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-                    <label for="mail">Your mail</label>
-                </div>
-                <div>
-                    <textarea [(ngModel)]="contactData.message" #message="ngModel" name="" id="message" name="message"
-                        cols="30" rows="10" required></textarea>
-                    <label for="message">Your message</label>
-                </div>
-                @if (!message.valid && message.touched && !message.disabled) {
-                <span>Please enter a message</span>
-                }
-                <input class="submit" type="submit">
-            </form>
-            <div>
-                <a href="#header"><img src="./../../../../assets/img/icons/up.svg" alt=""></a>
-            </div>
-        </div> -->
 
         <div>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
@@ -51,7 +25,6 @@
                     }
                 </mat-form-field>
 
-                <!-- ^(http(s){0,1}:\/\/.){0,1}[\-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([\-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)$ -->
                 <mat-form-field appearance="outline">
                     <mat-label>E-Mail</mat-label>
                     <input matInput [(ngModel)]="contactData.email" #emailInput="ngModel" name="email" required
@@ -93,29 +66,6 @@
                     [disabled]="!contactData.name || !contactData.email || !contactData.message || !contactData.legal">{{'contact.button' | translate }}</button>
             </form>
         </div>
-
-        <!-- <form class="contact-form">
-            <mat-form-field appearance="outline">
-                <mat-label>Your name</mat-label>
-                <input matInput type="text" [formControl]="nameFormControl" name="name" required>
-            </mat-form-field>
-            <mat-form-field class="example-full-width" appearance="outline">
-                <mat-label>Your mail</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                    placeholder="Ex. pat@example.com">
-                <mat-hint>Errors appear instantly!</mat-hint>
-                @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-                <mat-error>Please enter a valid email address</mat-error>
-                }
-                @if (emailFormControl.hasError('required')) {
-                <mat-error>Email is <strong>required</strong></mat-error>
-                }
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Your message</mat-label>
-                <textarea matInput [formControl]="messageFormControl"></textarea>
-            </mat-form-field>
-        </form> -->
     </main>
 
 </section>

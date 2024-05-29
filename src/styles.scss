@@ -44,19 +44,10 @@ $portfolio-theme: mat.define-dark-theme((color: (primary: $portfolio-primary,
     --mdc-outlined-text-field-outline-width: 1px;
 }
 
-
-
 .mat-mdc-text-field-wrapper {
     background-color: #141D2F;
     border-radius: 10px !important;
 }
-
-//   $my-primary: mat.define-palette(mat.$indigo-palette, 500);
-// $my-accent: mat.define-palette(mat.$teal-palette, A400);
-// $my-warn: mat.define-palette(mat.$deep-orange-palette);
-// $my-theme: mat.define-light-theme((color: (primary: $my-primary, accent: $my-accent, warn: $my-warn)));
-// @include mat.all-component-themes($my-theme);
-
 
 * {
     box-sizing: border-box;
@@ -69,7 +60,6 @@ body {
     background-color: #141D2F;
     font-family: poppins;
     color: white;
-
     background-image: url(./assets/img/background/purple-shadow1.svg), url(./assets/img/background/blue-shadow2.svg), url(./assets/img/background/purple-shadow4.svg), url(./assets/img/background/blue-shadow2.svg);
     background-size: min(calc(70vh - 64px), 80vw);
     background-position: right -100px top 1040px, left -50px center, left bottom 1000px, right bottom 600px;

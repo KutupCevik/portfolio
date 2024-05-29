@@ -42,12 +42,6 @@ export class ContactComponent {
     legal: false
   };
 
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-  //   }
-  // }
-
   mailTest = false;
 
   post = {
@@ -85,8 +79,6 @@ export class ContactComponent {
   openSnackBar() {
     this.snackBar.open('Message sent.', 'close', {
       duration: 5000, // Zeit in Millisekunden, bis der SnackBar automatisch geschlossen wird
-      // horizontalPosition: 'center', // Position des SnackBars auf dem Bildschirm
-      // verticalPosition: 'bottom', // Position des SnackBars auf dem Bildschirm
     });
   }
 }
