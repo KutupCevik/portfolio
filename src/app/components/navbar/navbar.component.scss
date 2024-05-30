@@ -57,7 +57,7 @@ nav {
         }
     }
 
-    img {
+    svg {
         width: 30px;
     }
 }
@@ -65,6 +65,29 @@ nav {
 .language {
     display: flex !important;
     align-items: center;
+}
+
+.language-text {
+    margin-left: 4px; /* Abstand zwischen Icon und Text */
+}
+
+/* Ändert die Farbe von Icon und Text, wenn über dem gesamten Link gehovered wird */
+.language:hover .language-icon {
+    stroke: #00BEE8; /* Ändern Sie dies in die gewünschte Farbe beim Hover */
+}
+
+.language:hover .language-text {
+    color: #00BEE8; /* Ändern Sie dies in die gewünschte Farbe beim Hover */
+}
+
+/* Ändert nur die Farbe des Icons, wenn direkt darüber gehovered wird */
+.language-icon:hover {
+    stroke: #00BEE8; /* Ändern Sie dies in die gewünschte Farbe beim Hover */
+}
+
+/* Ändert nur die Farbe des Textes, wenn direkt darüber gehovered wird */
+.language-text:hover {
+    color: #00BEE8; /* Ändern Sie dies in die gewünschte Farbe beim Hover */
 }
 
 .display-none {

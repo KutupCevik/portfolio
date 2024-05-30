@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -11,6 +11,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+    @ViewChild('checkbox') checkbox!: ElementRef<HTMLInputElement>;
+
+  ngAfterViewInit() {
+    // Jetzt ist die ViewChild-Referenz initialisiert
+  }
+
   screenWidth: number = window.innerWidth;
 
   constructor(public translateService: TranslateService) {
@@ -28,6 +34,13 @@ export class NavbarComponent {
       this.translateService.use('en');
     } else {
       this.translateService.use('de');
+    }
+  }
+
+  toggleCheckbox(event: Event): void {
+    if (this.checkbox) {
+      const checkboxElement = this.checkbox.nativeElement;
+      checkboxElement.checked = !checkboxElement.checked; // Ändert den Zustand der Checkbox
     }
   }
 }
