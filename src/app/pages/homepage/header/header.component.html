@@ -1,20 +1,20 @@
-<header>
-    <div class="introduce">
+<header data-aos="fade-up" id="header-section">
+    <div class="introduce" data-aos="fade-up">
         <div class="i-am">
             <div class="introduce-0">
-                <div [ngClass]="{'introduce-1': !languageDE(), 'introduce-1-de': languageDE()}">{{'header.i-am' | translate }}</div>
+                <div data-aos="fade-up" data-aos-anchor="#header-section" data-aos-anchor-placement="top-center" [ngClass]="{'introduce-1': !languageDE(), 'introduce-1-de': languageDE()}">{{'header.i-am' | translate }}</div>
                 <div>
                     <div class="introduce-2">Kutup Cevik</div>
                     <div [ngClass]="{'introduce-3': !languageDE(), 'introduce-3-de': languageDE()}">{{'header.developer' | translate }}</div>
                 </div>
             </div>
-            <button><a href="#contact">{{'header.contact' | translate }}</a></button>
+            <button data-aos="fade-left" data-aos-anchor="#header-section" data-aos-anchor-placement="top-center"><a href="#contact">{{'header.contact' | translate }}</a></button>
         </div>
     </div>
     <div class="background">
         <img #image class="img" src="./../../../../assets/img/background/background-curve1.svg" alt="">
     </div>
-    <div class="header-bottom">
+    <div data-aos="fade-right" data-aos-anchor="#header-section" data-aos-anchor-placement="top-center" class="header-bottom">
         <hr>
         <div class="links-arrow-container">
             <div class="links">

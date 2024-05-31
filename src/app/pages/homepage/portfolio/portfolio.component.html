@@ -1,12 +1,12 @@
 <section>
     <div class="portfolio-introduce">
-        <h1>{{'navbar.portfolio' | translate }}</h1>
-        <p>{{'portfolio.description' | translate }}</p>
+        <h1 data-aos="fade-on">{{'navbar.portfolio' | translate }}</h1>
+        <p data-aos="fade-up">{{'portfolio.description' | translate }}</p>
     </div>
     <div class="portfolio">
         @for (project of projects; track i; let i = $index) {
-            <div class="project">
-                <div>
+            <div data-aos="zoom-out" class="project">
+                <div data-aos="fade-left">
                     <img src="{{project.img}}" alt="">
                 </div>
                 <div class="project-introduce">

@@ -1,16 +1,16 @@
 <section>
-    <hr>
+    <hr data-aos="fade-left">
     <main>
-        <div class="introduce-skills">
+        <div data-aos="fade-on" class="introduce-skills">
             <div>
                 <div class="title">
                     <h1>{{'my-skills.my-skills' | translate }}</h1>
                 </div>
-                <p>{{'my-skills.description' | translate }}</p>
+                <p data-aos="fade-left">{{'my-skills.description' | translate }}</p>
             </div>
-            <button><a href="#contact">{{'my-skills.button' | translate }}</a></button>
+            <button data-aos="fade-up"><a href="#contact">{{'my-skills.button' | translate }}</a></button>
         </div>
-        <div class="skills">
+        <div data-aos="zoom-out" class="skills">
             @for (item of skills; track $index) {
                 <div class="skill">
                     <img src="{{item.icon}}" alt="">

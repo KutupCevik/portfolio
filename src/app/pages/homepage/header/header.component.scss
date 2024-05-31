@@ -225,7 +225,7 @@ $peakopacity: 0.7;
     header {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 40px;
     }
 
@@ -233,6 +233,7 @@ $peakopacity: 0.7;
         display: flex;
         justify-content: end;
         align-items: center;
+        height: 85%;
     }
 
     .i-am {
@@ -265,7 +266,7 @@ $peakopacity: 0.7;
 
 @media (max-aspect-ratio: 1.2/1) and (max-width: 800px) {
     .img {
-        height: 50%;
+        height: 60%;
         width: 130%;
     }
 }
